@@ -69,7 +69,7 @@ if(BUILD_TESTING)
   )
 
   ament_add_gmock(test_keyboard_handler ${keyboard_handler_test_sources})
-  target_link_libraries(test_keyboard_handler ${PROJECT_NAME})
+  target_link_libraries(test_keyboard_handler ${PROJECT_NAME} -latomic)
 endif()
 
 ament_package()
